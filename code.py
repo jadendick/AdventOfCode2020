@@ -1,12 +1,12 @@
 file = open("input","r")
 
 def part1():
-    print()
+    return()
 
 def part2():
-    print()
+    return()
 
-part1()
-# part2()
+print("Part 1: ",part1())
+print("Part 2: ",part2())
 
 file.close()
