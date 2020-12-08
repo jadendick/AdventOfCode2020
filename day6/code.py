@@ -1,3 +1,4 @@
+from functools import reduce
 input = open("input","r").read().split("\n\n")
 
 def part1():
@@ -13,16 +14,11 @@ def part1():
 def part2():
     sum = 0
     for i in input:
-        lines = i.split("\n")
-        common = set(lines[0])
-
-        for line in lines[1:]:
-            if(line != ""):
-                common = common.intersection(set(line))
-        
+        lines = i.rstrip().split("\n")
+        common = list(reduce(lambda a,b : a.intersection(b), [ set(x) for x in lines ]))
         sum += len(common)
         
-    return(sum)
+    return sum
 
 print("Part 1: ",part1())
 print("Part 2: ",part2())
