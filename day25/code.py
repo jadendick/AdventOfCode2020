@@ -26,17 +26,7 @@ def transform(subject, loopSize):
 
     return v
 
-def part1():
-    
-    return transform(key2,getLoopSize(key1))
 
-def part2():
-    s = 0
-
-
-    return s
-
-print("Part 1: ",part1())
-print("Part 2: ",part2())
+print("Part 1: ",transform(key2,getLoopSize(key1)))
 
 file.close()
